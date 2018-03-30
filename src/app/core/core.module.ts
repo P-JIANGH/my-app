@@ -1,11 +1,11 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
-import { MdIconRegistry } from '@angular/material';
+import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -13,7 +13,7 @@ import { loadSvgResources } from '../utils/svg.util';
 
 @NgModule({
   imports: [
-    HttpModule,
+    HttpClientModule,
     SharedModule,
     BrowserAnimationsModule
   ],
@@ -32,7 +32,7 @@ export class CoreModule {
 
   constructor(
     @Optional() @SkipSelf() parent: CoreModule,
-    ir: MdIconRegistry,
+    ir: MatIconRegistry,
     ds: DomSanitizer
   ) {
     if (parent) {
