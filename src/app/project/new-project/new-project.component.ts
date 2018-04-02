@@ -14,11 +14,11 @@ export class NewProjectComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(JSON.stringify(this.data));
+    // console.log(JSON.stringify(this.data));
   }
 
   onClick() {
-    this.dialogRef.close('I received your message');
+    // this.dialogRef.close('I received your message');
   }
 
 }
