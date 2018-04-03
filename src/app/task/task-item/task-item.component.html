@@ -1,7 +1,13 @@
-<mat-list-item class="container">
-  <mat-checkbox [checked]="item.completed"></mat-checkbox>
-  <div mat-line class="content">
-    {{item.desc}}
+<mat-list-item class="container"
+  [ngClass]="{
+    'priority-normal': item.priority === 3,
+    'priority-important': item.priority === 2,
+    'priority-emergency': item.priority === 1
+  }"
+>
+  <mat-checkbox class="completion-status" [checked]="item.completed"></mat-checkbox>
+  <div mat-line class="content" [ngClass]="{ 'completed': item.completed }">
+    <span [matTooltip]="item.desc">{{item.desc}}</span>
   </div>
   <div mat-line class="bottom-bar">
     <span class="due-date" *ngIf="item.dueDate">
@@ -9,5 +15,5 @@
     </span>
     <mat-icon *ngIf="item.reminder">alarm</mat-icon>
   </div>
-  <mat-icon [svgIcon]="avatar"></mat-icon>
+  <mat-icon class="avatar" mat-list-avatar [svgIcon]="avatar"></mat-icon>
 </mat-list-item>

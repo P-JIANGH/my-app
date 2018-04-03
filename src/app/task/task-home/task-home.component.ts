@@ -16,6 +16,7 @@ export class TaskHomeComponent implements OnInit {
           id: 1,
           desc: '任务一： 去星巴克买咖啡',
           completed: true,
+          priority: 3,
           owner: {
             id: 1,
             name: '张三',
@@ -26,6 +27,7 @@ export class TaskHomeComponent implements OnInit {
           id: 2,
           desc: '任务一： 去星巴克买咖啡',
           completed: false,
+          priority: 2,
           owner: {
             id: 1,
             name: '李四',
@@ -42,6 +44,7 @@ export class TaskHomeComponent implements OnInit {
         id: 3,
         desc: '任务一： 去星巴克买咖啡',
           completed: false,
+          priority: 1,
           owner: {
           id: 1,
           name: '赵五',
@@ -50,8 +53,9 @@ export class TaskHomeComponent implements OnInit {
         dueDate: new Date(),
       }, {
         id: 4,
-        desc: '任务一： 去星巴克买咖啡',
-          completed: true,
+        desc: '任务一： 完成老板布置的任务',
+          completed: false,
+          priority: 2,
           owner: {
           id: 1,
           name: '江浩',
@@ -62,6 +66,7 @@ export class TaskHomeComponent implements OnInit {
         id: 5,
         desc: '任务一： 去星巴克买咖啡',
           completed: false,
+          priority: 3,
           owner: {
           id: 1,
           name: '葱葱',
