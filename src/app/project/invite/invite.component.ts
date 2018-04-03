@@ -22,6 +22,6 @@ export class InviteComponent implements OnInit {
   ngOnInit() {
   }
 
-  displayUser = user => (user.name);
+  displayUser = user => user.name;
 
 }
