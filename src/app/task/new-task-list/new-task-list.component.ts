@@ -2,16 +2,17 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-new-project',
-  templateUrl: './new-project.component.html',
-  styleUrls: ['./new-project.component.scss']
+  selector: 'app-new-task-list',
+  templateUrl: './new-task-list.component.html',
+  styleUrls: ['./new-task-list.component.scss']
 })
-export class NewProjectComponent implements OnInit {
+export class NewTaskListComponent implements OnInit {
 
   title = '';
+
   constructor(
     @Inject(MAT_DIALOG_DATA) private data,
-    private dialogRef: MatDialogRef<NewProjectComponent>,
+    private dialogRef: MatDialogRef<NewTaskListComponent>
   ) { }
 
   ngOnInit() {
@@ -19,7 +20,7 @@ export class NewProjectComponent implements OnInit {
   }
 
   onClick() {
-    // this.dialogRef.close('I received your message');
+    this.dialogRef.close(this.title);
   }
 
 }
