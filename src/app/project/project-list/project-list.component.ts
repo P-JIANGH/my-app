@@ -20,12 +20,12 @@ export class ProjectListComponent implements OnInit {
       id: 1,
       name: '企业协作平台',
       desc: '这是一个企业内部项目',
-      coverimg: 'assets/img/covers/cover.jpg',
+      coverimg: 'assets/img/covers/cover.png',
     }, {
       id: 2,
       name: '自动化测试项目',
       desc: '这是一个企业内部项目',
-      coverimg: 'assets/img/covers/cover.jpg',
+      coverimg: 'assets/img/covers/cover.png',
     },
   ];
   constructor(private dialog: MatDialog) { }
@@ -43,12 +43,12 @@ export class ProjectListComponent implements OnInit {
         id: 3,
         name: '一个新项目',
         desc: '这是一个新项目',
-        coverimg: 'assets/img/covers/cover.jpg',
+        coverimg: 'assets/img/covers/cover.png',
       }, {
         id: 4,
         name: '又一个新项目',
         desc: '又这是一个新项目',
-        coverimg: 'assets/img/covers/cover.jpg',
+        coverimg: 'assets/img/covers/cover.png',
       }];
       console.dir(this.projects);
     });
