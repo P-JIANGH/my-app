@@ -10,12 +10,15 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { loadSvgResources } from '../utils/svg.util';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   imports: [
     HttpClientModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   declarations: [
     HeaderComponent,
@@ -25,7 +28,9 @@ import { loadSvgResources } from '../utils/svg.util';
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ]
 })
 export class CoreModule {

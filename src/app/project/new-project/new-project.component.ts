@@ -19,7 +19,7 @@ export class NewProjectComponent implements OnInit {
   }
 
   onClick() {
-    // this.dialogRef.close('I received your message');
+    this.dialogRef.close('I received your message');
   }
 
 }
