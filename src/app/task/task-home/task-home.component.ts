@@ -16,6 +16,7 @@ import { slideToRight } from '../../animate/router.anim';
 export class TaskHomeComponent implements OnInit {
 
   @HostBinding('@routeAnim') state;
+  taskList;
 
   lists = [
     {
@@ -142,5 +143,18 @@ export class TaskHomeComponent implements OnInit {
       },
     });
     dialogRef.afterClosed().subscribe(result => console.log(result));
+  }
+
+  handleMove(srcData, list) {
+    switch (srcData.tag) {
+      case 'task-item':
+        console.log('handing item');
+        break;
+      case 'task-list':
+        console.log('handing list');
+        break;
+      default:
+        break;
+    }
   }
 }
