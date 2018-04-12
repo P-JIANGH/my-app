@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { loadSvgResources } from '../utils/svg.util';
 import { AppRoutingModule } from '../app-routing.module';
 import 'rxjs/add/operator/take';
+import { ServiceModule } from '../service/service.module';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import 'rxjs/add/operator/take';
     BrowserAnimationsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ServiceModule.forRoot(),
   ],
   declarations: [
     HeaderComponent,

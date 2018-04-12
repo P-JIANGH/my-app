@@ -21,6 +21,7 @@ export class TaskHomeComponent implements OnInit {
   lists = [
     {
       id: 1,
+      order: 1,
       name: '待办',
       tasks: [
         {
@@ -50,6 +51,7 @@ export class TaskHomeComponent implements OnInit {
       ],
     }, {
       id: 2,
+      order: 2,
       name: '进行中',
       tasks:  [{
         id: 3,
@@ -152,6 +154,10 @@ export class TaskHomeComponent implements OnInit {
         break;
       case 'task-list':
         console.log('handing list');
+        const srcList = srcData.data;
+        const tempOrder = srcList.order;
+        srcList.order = list.order;
+        list.order = tempOrder;
         break;
       default:
         break;

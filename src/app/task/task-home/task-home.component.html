@@ -9,7 +9,8 @@
     [draggedClass]="'drag-start'"
     [dragTag]="'task-list'"
     [dragData]="list"
-    (dropped)="handleMove($event)"
+    (dropped)="handleMove($event, list)"
+    [ngStyle]="{'order': list.order}"
   >
     <app-task-header
       (newTask)="launchNewTaskDialog()"
@@ -17,7 +18,9 @@
       (delList)="launchDelDialog()"
       (editList)="launchEditListDialog()"
       [header]="list.name"
-      ></app-task-header>
+    >
+
+    </app-task-header>
     <app-task-item
       *ngFor="let task of list.tasks"
       [item]="task"
