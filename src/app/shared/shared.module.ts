@@ -24,6 +24,7 @@ import {
   MatSidenavModule,
  } from '@angular/material';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 
 @NgModule({
   imports: [
@@ -51,7 +52,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     ReactiveFormsModule,
   ],
   declarations: [
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ImageListSelectComponent
   ],
   exports: [
     CommonModule,
@@ -76,6 +78,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatNativeDateModule,
     FormsModule,
     ReactiveFormsModule,
+    ImageListSelectComponent,
   ],
   entryComponents: [
     ConfirmDialogComponent,
