@@ -14,6 +14,8 @@ import { AppRoutingModule } from '../app-routing.module';
 import 'rxjs/add/operator/take';
 import { ServiceModule } from '../service/service.module';
 
+import '../utils/debug.util';
+
 @NgModule({
   imports: [
     HttpClientModule,
@@ -36,7 +38,11 @@ import { ServiceModule } from '../service/service.module';
     BrowserAnimationsModule,
   ],
   providers: [
-    { provide: 'BASE_CONFIG', useValue: 'http://localhost:4200' },
+    {
+      provide: 'BASE_CONFIG', useValue: {
+        url: 'http://localhost:3000'
+      }
+    },
   ],
 })
 export class CoreModule {
