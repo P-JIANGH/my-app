@@ -15,6 +15,12 @@ import 'rxjs/add/operator/take';
 import { ServiceModule } from '../service/service.module';
 
 import '../utils/debug.util';
+import 'rxjs/add/observable/combineLatest';
+import 'rxjs/add/observable/merge';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/startWith';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
 
 @NgModule({
   imports: [
